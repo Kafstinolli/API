@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 app.get('/hora', (req, res) => {
     const ciudades = ['Asia/Tokyo', 'America/Argentina/Buenos_Aires', 'America/Santiago'];
     const hora = ciudades.map(ciudad => {
-        return `${ciudad}: ${moment().tz(ciudad).format('HH:mm:ss')}`;
+        return `La hora en: ${ciudad}: ${moment().tz(ciudad).format('HH:mm:ss')}`;
     });
     res.send(hora.join('\n'));
 }
